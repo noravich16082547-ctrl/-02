@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เทสต์ ฮาร์โมนี (Taste Harmony) | ร้านอาหารระดับพรีเมียม</title>
+  <meta name="description" content="สัมผัสรสชาติแห่งความสุขกับการสั่งอาหารออนไลน์และจองโต๊ะล่วงหน้าที่ Taste Harmony วัตถุดิบสดใหม่ รสชาติระดับเชฟมืออาชีพ">
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z59KHEYC2S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z59KHEYC2S');
+  </script>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-utensils"></i> Taste<span>Harmony</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active">หน้าแรก</a></li>
+        <li><a href="#menu">เมนูอาหาร</a></li>
+        <li><a href="#booking">จองโต๊ะ</a></li>
+        <li><a href="#promotions">โปรโมชัน</a></li>
+        <li><a href="#about">เกี่ยวกับเรา</a></li>
+        <li><a href="#contact">ติดต่อเรา</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="cart-icon-wrapper" id="cart-btn">
+          <i class="fa-solid fa-cart-shopping fa-lg"></i>
+          <div class="cart-badge" id="cart-badge-count">0</div>
+        </div>
+        <a href="login.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">
+          <i class="fa-solid fa-user-lock"></i> พนักงาน
+        </a>
+        <button class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero container" id="home">
+    <div class="hero-content">
+      <h1>สัมผัสความอร่อย<br>ที่ผสมผสานอย่างลงตัว <span>Taste Harmony</span></h1>
+      <p>ร้านอาหารฟิวชันระดับพรีเมียม คัดสรรเฉพาะวัตถุดิบออร์แกนิคสดใหม่จากฟาร์มท้องถิ่น รังสรรค์เมนูโดยเชฟมืออาชีพผู้มีประสบการณ์การปรุงอาหารกว่า 15 ปี</p>
+      <div class="hero-ctas">
+        <a href="#menu" class="btn btn-primary"><i class="fa-solid fa-burger"></i> สั่งอาหารออนไลน์</a>
+        <a href="#booking" class="btn btn-secondary"><i class="fa-solid fa-calendar-days"></i> จองโต๊ะล่วงหน้า</a>
+      </div>
+      <div class="hero-info-grid">
+        <div class="info-item">
+          <span class="label">เวลาเปิดทำการ</span>
+          <span class="value">ทุกวัน 10:00 - 22:00 น.</span>
+        </div>
+        <div class="info-item">
+          <span class="label">เบอร์โทรศัพท์</span>
+          <span class="value">02-123-4567</span>
+        </div>
+        <div class="info-item">
+          <span class="label">รีวิวจากลูกค้า</span>
+          <span class="value" style="color: var(--warning);">
+            <i class="fa-solid fa-star"></i> 4.9 (480+ รีวิว)
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-container">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" alt="Signature Dish" class="hero-img">
+      <div class="hero-badge">
+        <div class="icon">🌶️</div>
+        <div>
+          <p class="title">เมนูแนะนำสัปดาห์นี้</p>
+          <p class="subtitle">ต้มยำกุ้งแม่น้ำรสจัดจ้าน</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" style="background-color: var(--card-bg);">
+    <div class="container">
+      <div class="section-header">
+        <h2>เมนูอาหารแสนอร่อย</h2>
+        <p>เลือกสรรเมนูที่คุณชื่นชอบและสั่งล่วงหน้าได้ทันที ไม่ต้องรอคิวนาน</p>
+      </div>
+
+      <!-- Menu Filters -->
+      <div class="menu-filter-bar">
+        <div class="menu-search-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="menu-search" placeholder="ค้นหาเมนูอาหาร...">
+        </div>
+        <div class="menu-tabs">
+          <button class="tab-btn active" data-category="all">ทั้งหมด</button>
+          <button class="tab-btn" data-category="จานหลัก">จานหลัก</button>
+          <button class="tab-btn" data-category="อาหารทานเล่น">อาหารทานเล่น</button>
+          <button class="tab-btn" data-category="ของหวาน">ของหวาน</button>
+          <button class="tab-btn" data-category="เครื่องดื่ม">เครื่องดื่ม</button>
+        </div>
+        <div class="diet-filters">
+          <label class="diet-checkbox" id="filter-spicy-lbl">
+            <input type="checkbox" id="filter-spicy"> 🌶️ เผ็ดร้อน
+          </label>
+          <label class="diet-checkbox" id="filter-nuts-lbl">
+            <input type="checkbox" id="filter-nuts"> 🥜 มีส่วนผสมของถั่ว
+          </label>
+          <label class="diet-checkbox" id="filter-veg-lbl">
+            <input type="checkbox" id="filter-veg"> 🥬 มังสวิรัติ / เจ
+          </label>
+        </div>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menu-items-container">
+        <!-- Rendered dynamically by JavaScript -->
+        <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">
+          <i class="fa-solid fa-spinner fa-spin fa-2xl"></i><br><br>กำลังโหลดเมนู...
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking">
+    <div class="container">
+      <div class="section-header">
+        <h2>จองโต๊ะออนไลน์</h2>
+        <p>จองโต๊ะล่วงหน้าเพื่อประสบการณ์การทานอาหารที่ดีที่สุดกับเรา สะดวกรวดเร็วในไม่กี่ขั้นตอน</p>
+      </div>
+
+      <div class="booking-container">
+        <div class="booking-info">
+          <div>
+            <h3>สิทธิพิเศษสำหรับลูกค้าจองโต๊ะล่วงหน้า</h3>
+            <p>หลีกเลี่ยงการรอคิวนานในช่วงวันหยุด และเลือกตำแหน่งโต๊ะที่คุณต้องการได้ล่วงหน้า</p>
+          </div>
+          <div class="booking-features">
+            <div class="booking-feat-item">
+              <div class="icon"><i class="fa-solid fa-chair"></i></div>
+              <div>
+                <strong style="display: block;">เลือกโซนที่นั่งได้</strong>
+                <span style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">เลือกโต๊ะริมหน้าต่าง ห้องส่วนตัว หรือโซนกลางแจ้ง</span>
+              </div>
+            </div>
+            <div class="booking-feat-item">
+              <div class="icon"><i class="fa-solid fa-sparkles"></i></div>
+              <div>
+                <strong style="display: block;">จัดแต่งโต๊ะพิเศษ</strong>
+                <span style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">ระบุโอกาสพิเศษ เช่น ครบรอบวันแต่งงาน หรือ วันเกิด</span>
+              </div>
+            </div>
+            <div class="booking-feat-item">
+              <div class="icon"><i class="fa-solid fa-bell"></i></div>
+              <div>
+                <strong style="display: block;">การแจ้งเตือนทันที</strong>
+                <span style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">ได้รับการยืนยันสถานะการจองผ่านเว็บระบบหลังร้านของพนักงานทันที</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-form-wrapper">
+          <form id="booking-form">
+            <div class="form-group">
+              <label for="booking-name">ชื่อผู้จอง <span style="color:var(--danger)">*</span></label>
+              <input type="text" id="booking-name" required placeholder="ระบุชื่อ-นามสกุล ของคุณ">
+            </div>
+            <div class="form-group">
+              <label for="booking-phone">เบอร์โทรศัพท์ติดต่อ <span style="color:var(--danger)">*</span></label>
+              <input type="tel" id="booking-phone" required placeholder="เช่น 081-234-5678">
+            </div>
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="booking-date">วันที่ต้องการจอง <span style="color:var(--danger)">*</span></label>
+                <input type="date" id="booking-date" required>
+              </div>
+              <div class="form-group">
+                <label for="booking-time">เวลา <span style="color:var(--danger)">*</span></label>
+                <select id="booking-time" required>
+                  <option value="" disabled selected>เลือกเวลา</option>
+                  <option value="11:00">11:00 น.</option>
+                  <option value="12:00">12:00 น.</option>
+                  <option value="13:00">13:00 น.</option>
+                  <option value="14:00">14:00 น.</option>
+                  <option value="17:00">17:00 น.</option>
+                  <option value="18:00">18:00 น.</option>
+                  <option value="19:00">19:00 น.</option>
+                  <option value="20:00">20:00 น.</option>
+                  <option value="21:00">21:00 น.</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="booking-guests">จำนวนผู้ร่วมโต๊ะ <span style="color:var(--danger)">*</span></label>
+              <select id="booking-guests" required>
+                <option value="1">1 ท่าน</option>
+                <option value="2" selected>2 ท่าน</option>
+                <option value="3">3 ท่าน</option>
+                <option value="4">4 ท่าน</option>
+                <option value="5">5 ท่าน</option>
+                <option value="6">6 ท่าน</option>
+                <option value="8">7-8 ท่าน</option>
+                <option value="10">9-10 ท่าน</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="booking-requests">คำขอพิเศษเพิ่มเติม</label>
+              <textarea id="booking-requests" rows="3" placeholder="ระบุเช่น ขอเก้าอี้เด็กเล็ก โต๊ะริมกระจก หรือแพ้อาหารประเภทใด..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%"><i class="fa-solid fa-circle-check"></i> ยืนยันการจองโต๊ะ</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Monthly Promotions Section -->
+  <section id="promotions" style="background-color: var(--card-bg);">
+    <div class="container">
+      <div class="section-header">
+        <h2>โปรโมชันและดีลสุดพิเศษ</h2>
+        <p>ข้อเสนอพิเศษประจำเดือนเพื่อเพิ่มความสุขในการรับประทานอาหารของคุณ</p>
+      </div>
+
+      <div class="promo-grid">
+        <!-- Promo 1 -->
+        <div class="promo-card">
+          <div class="promo-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600&auto=format&fit=crop" alt="Family Set Promotion">
+            <div class="promo-badge">สุดคุ้ม</div>
+          </div>
+          <div class="promo-content">
+            <h3>Family Set Menu ลดทันที 15%</h3>
+            <p>สั่งเซ็ตอาหารสำหรับครอบครัว ประกอบด้วยแกงจืดเต้าหู้หมูสับ ต้มยำกุ้ง ผัดไทย และข้าวผัดปู รับส่วนลดทันที 15% พร้อมเครื่องดื่มฟรี</p>
+            <div class="promo-code-box">
+              <span style="font-size:0.8rem; color:var(--text-muted)">ใช้โค้ดส่วนลดที่เคาน์เตอร์:</span>
+              <span class="promo-code">FAM15</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Promo 2 -->
+        <div class="promo-card">
+          <div class="promo-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600&auto=format&fit=crop" alt="Live Music Night">
+            <div class="promo-badge">อีเวนต์</div>
+          </div>
+          <div class="promo-content">
+            <h3>ดนตรีสดและเทศกาลเบียร์สดคราฟต์</h3>
+            <p>พบกับค่ำคืนดนตรีสไตล์อคูสติกเบาๆ ชิวๆ ทุกคืนวันศุกร์และเสาร์ ตั้งแต่เวลา 19:30 น. เป็นต้นไป พร้อมโปรเบียร์สดซื้อ 2 แถม 1 ตลอดคืน</p>
+            <div class="promo-code-box">
+              <span style="font-size:0.8rem; color:var(--text-muted)">วันเวลา:</span>
+              <span class="promo-code" style="font-family:inherit; font-size:0.9rem">ศุกร์-เสาร์ 19:30-22:00 น.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Promo 3 -->
+        <div class="promo-card">
+          <div class="promo-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" alt="PromptPay discount">
+            <div class="promo-badge">สแกนจ่าย</div>
+          </div>
+          <div class="promo-content">
+            <h3>สแกนจ่ายพร้อมเพย์ รับขนมหวานฟรี</h3>
+            <p>เมื่อทานอาหารในร้านครบ 800 บาทขึ้นไป และชำระเงินผ่านระบบพร้อมเพย์ รับสิทธิ์ฟรีข้าวเหนียวมะม่วงน้ำดอกไม้ หรือไอศกรีมกะทิสดโบราณ 1 ถ้วย</p>
+            <div class="promo-code-box">
+              <span style="font-size:0.8rem; color:var(--text-muted)">เงื่อนไข:</span>
+              <span class="promo-code" style="font-family:inherit; font-size:0.9rem">ชำระผ่าน PromptPay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h3 style="color: var(--primary); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">เรื่องราวของเรา</h3>
+        <h2>รังสรรค์เมนูโปรดด้วยใจรัก<br>และวัตถุดิบคุณภาพสูง</h2>
+        <p>ร้าน <strong>Taste Harmony</strong> เริ่มต้นจากการเป็นฟาร์มออร์แกนิคขนาดเล็กๆ ในปี 2018 จากนั้นเราได้นำผักผลไม้ และเนื้อสัตว์อินทรีย์ที่เพาะเลี้ยงด้วยวิธีธรรมชาติมารังสรรค์เป็นเมนูต่างๆ จนกระทั่งพัฒนาเป็นร้านอาหารเพื่อส่งต่อความอร่อยและความใส่ใจในสุขภาพให้กับคนเมือง</p>
+        <p>เรามุ่งมั่นในการผสานสองขั้วระหว่าง "รสชาติจัดจ้านแบบดั้งเดิม" และ "การจัดแต่งอาหารร่วมสมัย" เพื่อสร้างสรรค์มิติใหม่ของอาหารไทยฟิวชันที่ทุกคนต้องตกหลุมรัก</p>
+        
+        <div class="about-badges">
+          <div class="about-badge-item">
+            <div class="icon"><i class="fa-solid fa-leaf"></i></div>
+            <div class="title">วัตถุดิบออร์แกนิคแท้ 100%</div>
+          </div>
+          <div class="about-badge-item">
+            <div class="icon"><i class="fa-solid fa-award"></i></div>
+            <div class="title">สูตรเด็ดโดยเชฟมือรางวัล</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-img-container">
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=600&auto=format&fit=crop" alt="Chef Preparing Food" class="about-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Location Section -->
+  <section id="contact" style="background-color: var(--card-bg);">
+    <div class="container">
+      <div class="section-header">
+        <h2>ติดต่อเราและแผนที่เดินทาง</h2>
+        <p>หากคุณมีคำถามใดๆ หรือต้องการสอบถามเรื่องการเดินทาง สามารถเช็คข้อมูลด้านล่างได้ทันที</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-info-block">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h4>ที่ตั้งร้าน</h4>
+              <p>123/45 ถนนสุขุมวิท แขวงคลองเตย เขตคลองเตย กรุงเทพมหานคร 10110</p>
+              <p style="font-size:0.8rem; margin-top:4px; color:var(--primary); font-weight:600;"><i class="fa-solid fa-square-parking"></i> มีที่จอดรถหน้าร้านฟรี (รองรับ 20 คัน)</p>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h4>เวลาเปิด-ปิด</h4>
+              <p>เปิดให้บริการทุกวัน จันทร์ - อาทิตย์<br>เวลา 10:00 น. - 22:00 น. (ครัวปิด 21:30 น.)</p>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="icon"><i class="fa-solid fa-train"></i></div>
+            <div>
+              <h4>เดินทางด้วยรถไฟฟ้า</h4>
+              <p>BTS สถานีพร้อมพงษ์ (ทางออก 4) เดินต่อเข้ามาในซอยสุขุมวิท 24 เพียง 5 นาที</p>
+            </div>
+          </div>
+
+          <div>
+            <h4 style="margin-bottom: 12px;">ติดตามเราบนโซเชียลมีเดีย</h4>
+            <div class="social-links">
+              <a href="#" class="social-btn"><i class="fa-brands fa-line"></i></a>
+              <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-btn"><i class="fa-solid fa-phone"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <!-- Embed Google Maps with standard location pointer -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.9229983995535!2d100.56708777579124!3d13.723048897985396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f03b573a483%3A0x6e9f1eb5e4e7e60b!2sEmQuartier!5e0!3m2!1sth!2sth!4v1700000000000!5m2!1sth!2sth" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shopping Cart Drawer Overlay -->
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-basket-shopping"></i> ตะกร้าสั่งอาหาร</h3>
+      <button class="cart-close-btn" id="cart-close-btn">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items-container">
+      <!-- Added dynamically by JS -->
+      <div class="cart-empty-message">ไม่มีอาหารในตะกร้าของคุณ</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-totals">
+        <div class="cart-total-row">
+          <span>ค่าอาหาร</span>
+          <span id="cart-subtotal">0.00 ฿</span>
+        </div>
+        <div class="cart-total-row">
+          <span>ค่าบริการ & VAT (7%)</span>
+          <span id="cart-vat">0.00 ฿</span>
+        </div>
+        <div class="cart-total-row grand-total">
+          <span>รวมทั้งสิ้น</span>
+          <span id="cart-total">0.00 ฿</span>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="checkout-btn" style="width:100%" disabled>สั่งอาหารออนไลน์</button>
+    </div>
+  </div>
+
+  <!-- Checkout / Order Modal Form -->
+  <div class="cart-backdrop" id="checkout-backdrop"></div>
+  <div class="modal" id="checkout-modal">
+    <div class="modal-header">
+      <h3 style="font-size: 1.25rem;"><i class="fa-solid fa-credit-card"></i> ดำเนินการชำระเงินและสั่งซื้อ</h3>
+      <button class="modal-close-btn" id="checkout-close-btn">&times;</button>
+    </div>
+    <form id="checkout-form">
+      <div class="form-group">
+        <label for="order-type">รูปแบบการเสิร์ฟ <span style="color:var(--danger)">*</span></label>
+        <select id="order-type" required>
+          <option value="dine-in" selected>ทานในร้าน (Dine-in)</option>
+          <option value="takeaway">กลับบ้าน / เดลิเวอรี (Takeaway)</option>
+        </select>
+      </div>
+
+      <!-- Dine-in Specific Fields -->
+      <div class="form-group" id="table-number-group">
+        <label for="table-number">หมายเลขโต๊ะ <span style="color:var(--danger)">*</span></label>
+        <select id="table-number" required>
+          <option value="" disabled selected>เลือกหมายเลขโต๊ะของคุณ</option>
+          <option value="T1">โต๊ะ 1 (โซนในร้าน)</option>
+          <option value="T2">โต๊ะ 2 (โซนในร้าน)</option>
+          <option value="T3">โต๊ะ 3 (โซนในร้าน)</option>
+          <option value="T4">โต๊ะ 4 (ริมหน้าต่าง)</option>
+          <option value="T5">โต๊ะ 5 (ริมหน้าต่าง)</option>
+          <option value="T6">โต๊ะ 6 (โซนสวน)</option>
+          <option value="T7">โต๊ะ 7 (โซนสวน)</option>
+          <option value="T8">โต๊ะ VIP 1 (ห้องส่วนตัว)</option>
+        </select>
+      </div>
+
+      <!-- Checkout Details -->
+      <div class="form-group">
+        <label for="checkout-name">ชื่อผู้สั่งอาหาร <span style="color:var(--danger)">*</span></label>
+        <input type="text" id="checkout-name" required placeholder="กรุณาระบุชื่อของคุณ">
+      </div>
+      <div class="form-group">
+        <label for="checkout-phone">เบอร์โทรศัพท์ติดต่อ <span style="color:var(--danger)">*</span></label>
+        <input type="tel" id="checkout-phone" required placeholder="เช่น 081-234-5678">
+      </div>
+
+      <div class="form-group">
+        <label for="payment-method">ช่องทางการชำระเงิน <span style="color:var(--danger)">*</span></label>
+        <select id="payment-method" required>
+          <option value="cash" selected>เงินสด / ชำระที่เคาน์เตอร์</option>
+          <option value="promptpay">สแกนพร้อมเพย์ (PromptPay QR)</option>
+        </select>
+      </div>
+
+      <!-- PromptPay QR Section (Hidden initially) -->
+      <div class="promptpay-wrapper" id="promptpay-section" style="display:none">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=0002010102113000160006940000000001030312345678901235406850.00" alt="PromptPay QR Code" class="promptpay-img" id="pp-qr-img">
+        <div class="promptpay-info">
+          <p>สแกน QR Code ด้านบนเพื่อโอนเงินชำระค่าอาหาร</p>
+          <p>ยอดชำระที่ต้องโอน: <strong id="pp-qr-amount">0.00</strong> บาท</p>
+          <p style="font-size:0.75rem; margin-top:4px;">*หลังจากโอนสำเร็จ กรุณากดปุ่มยืนยันด้านล่าง</p>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%"><i class="fa-solid fa-receipt"></i> ยืนยันการสั่งออเดอร์</button>
+    </form>
+  </div>
+
+  <!-- Floating Action Button (FAB) -->
+  <div class="fab-wrapper" id="fab-wrapper">
+    <div class="fab-options">
+      <a href="tel:021234567" class="fab-btn">
+        <span>โทรติดต่อร้าน</span>
+        <div class="fab-btn-icon fab-phone"><i class="fa-solid fa-phone"></i></div>
+      </a>
+      <a href="https://line.me" target="_blank" class="fab-btn">
+        <span>แชท Line OA</span>
+        <div class="fab-btn-icon fab-line"><i class="fa-brands fa-line"></i></div>
+      </a>
+    </div>
+    <div class="fab-main" id="fab-main-btn">
+      <i class="fa-solid fa-headset"></i>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <i class="fa-solid fa-utensils"></i> Taste<span>Harmony</span>
+        </div>
+        <p>รสชาติอาหารฟิวชันพรีเมียมที่รังสรรค์ด้วยความรัก วัตถุดิบอินทรีย์ และความใส่ใจในสุขภาพของลูกค้ายืนหนึ่งเพื่อความเป็นเอกลักษณ์</p>
+      </div>
+      <div class="footer-links-col">
+        <h4>ลิงก์ทางลัด</h4>
+        <ul class="footer-links">
+          <li><a href="#home">หน้าแรก</a></li>
+          <li><a href="#menu">เมนูอาหาร</a></li>
+          <li><a href="#booking">จองโต๊ะออนไลน์</a></li>
+          <li><a href="#promotions">โปรโมชันประจำเดือน</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4>ติดต่อเรา</h4>
+        <ul class="footer-links" style="color: rgba(255,255,255,0.6);">
+          <li><i class="fa-solid fa-phone" style="color: var(--primary);"></i> 02-123-4567</li>
+          <li><i class="fa-solid fa-envelope" style="color: var(--primary);"></i> contact@tasteharmony.com</li>
+          <li><i class="fa-solid fa-map-location-dot" style="color: var(--primary);"></i> สุขุมวิท 24 แขวงคลองเตย กทม.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2026 Taste Harmony Restaurant (GitHub Repo: 681894003). All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
