@@ -153,7 +153,7 @@
 
 ## การตั้งค่า Google Analytics (Google Analytics Setup)
 
-ระบบได้รับการติดตั้งและกำหนดค่า **Google Analytics (gtag.js)** เรียบร้อยแล้วด้วยรหัส **Measurement ID**: `G-Z59KHEYC2S` ในส่วน `<head>` ของทุกไฟล์ HTML (`index.html`, `login.html`, `admin.html`)
+ระบบได้รับการติดตั้งและกำหนดค่า **Google Analytics (gtag.js)** เรียบร้อยแล้วด้วยรหัส **Measurement ID**: `G-5ZXP3TPVYF` ในส่วน `<head>` ของทุกไฟล์ HTML (`index.html`, `login.html`, `admin.html`)
 
 ข้อมูลการวัดผลและสถิติต่างๆ ของผู้เข้าชมเว็บไซต์จะถูกส่งไปยังแดชบอร์ด Google Analytics ของคุณโดยตรงเมื่อผู้ใช้เปิดใช้งานหน้าเว็บหลังจากเผยแพร่สู่ Vercel หรือทดสอบในเครื่อง!
 
